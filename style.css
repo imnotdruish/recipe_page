@@ -41,7 +41,7 @@ img {
   width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
   font-family: 'young-serif', serif;
   color: var(--primary-color);
 }
@@ -50,6 +50,10 @@ h1 {
   margin: 2rem auto 1rem;
   font-size: 1.8rem;
   text-align: left;
+}
+
+h2 {
+  padding-bottom: 1rem;
 }
 
 p {
@@ -101,12 +105,8 @@ li::marker {
 }
 
 .ingredients {
-  display: flex;
-  flex-direction: column;
   margin: 0 auto;
   padding: 2rem;
-  align-items: flex-start;
-  justify-content: flex-start;
   border-bottom: 1px solid var(--primary-color-lighter);
 }
 
