@@ -32,10 +32,6 @@ header {
   max-width: 800px;
 }
 
-.header__content {
-  width: 90%;
-  margin: 0 auto;
-}
 
 img {
   width: 100%;
@@ -76,6 +72,12 @@ li::marker {
   color: var(--primary-color);
   font-family: 'outline', sans-serif;
   font-weight: 500;
+}
+
+.header__content {
+  width: 90%;
+  padding-bottom: 2rem;
+  margin: 0 auto;
 }
 
 .content__container {
@@ -164,9 +166,5 @@ li::marker {
 @media (min-width: 800px) {
   header img {
     border-radius: 1rem;
-  }
-
-  .header__content {
-    margin: 0;
   }
 }
