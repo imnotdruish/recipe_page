@@ -12,17 +12,29 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  --primary-color: hsla(26, 82%, 22%, 1);
-  --primary-color-lighter: hsla(26, 82%, 72%, 1);
+  --primary-color: hsla(12, 44%, 36%, 1);
+  --primary-color-lighter: hsla(30, 0%, 88%, 1);
   --secondary-color: hsla(240, 5%, 26%, 1);
-  --secondary-accent-color: hsla(0, 93%, 94%, 0.5);
-  --primary-accent-color: hsla(320, 71%, 36%, 1);
+  --secondary-accent-color: hsla(329, 100%, 99%, 1);
+  --primary-accent-color: hsla(335, 50%, 33%, 1);
+  --bg-color: hsla(30, 55%, 90%, 1);
 }
 
 html {
   font-family: 'outfit', sans-serif;
   color: var(--secondary-color);
   font-weight: 300;
+}
+
+body {
+  background-color:  var(--bg-color);
+}
+
+.content__container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
 }
 
 header {
@@ -46,6 +58,7 @@ h1 {
   margin: 2rem auto 1rem;
   font-size: 1.8rem;
   text-align: left;
+  color: black;
 }
 
 h2 {
@@ -74,19 +87,23 @@ li::marker {
   font-weight: 500;
 }
 
+.header__content,
+.prep,
+.ingredients,
+.instructions,
+.nutrition {
+  width: 90%;
+}
+
 .header__content {
   width: 90%;
   padding-bottom: 2rem;
   margin: 0 auto;
 }
 
-.content__container {
-  width: 90%;
-  max-width: 800px;
-  margin: 0 auto;
-}
 
 .prep {
+  width: 90%;
   background-color: var(--secondary-accent-color);
   padding: 2rem;
   margin: 0 auto;
@@ -134,11 +151,13 @@ li::marker {
 }
 
 .nutrition table tr {
-  border-bottom: 1px solid var(--primary-color);
+  line-height: 2rem;
+  border-bottom: 1px solid var(--primary-color-lighter);
 }
 
 .nutrition table td {
   width: 50vw;
+  padding-left: 1rem;
   text-align: left;
 }
 
@@ -163,8 +182,28 @@ li::marker {
   color: hsl(228, 45%, 44%); 
 }
 
-@media (min-width: 800px) {
+@media (min-width: 600px) {
+
+  .content__container {
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 5rem auto;
+  }
+
   header img {
     border-radius: 1rem;
   }
+
+  header {
+    width: 100%;
+  }
+
+  .header__content,
+  .prep,
+  .ingredients,
+  .instructions,
+  .nutrition {
+    width: 100%;
+  }
+
 }
